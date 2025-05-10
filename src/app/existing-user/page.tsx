@@ -68,7 +68,7 @@ export default function ExistingUserPage() {
 							monitor your vehicle's health.
 						</p>
 						<Button asChild variant="secondary" className="w-full max-w-xs">
-							<Link href="/existing-user/maintenance">Manage Maintenance</Link>
+							<Link href="/existing-user/my-cars">Manage Cars</Link>
 						</Button>
 					</CardContent>
 				</Card>

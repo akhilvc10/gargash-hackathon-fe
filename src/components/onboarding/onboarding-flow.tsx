@@ -39,6 +39,8 @@ import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { RecommendedCars } from "@/components/onboarding/recommended-cars";
+import { API_ENDPOINTS } from "@/types/api";
+import type { CustomerInput } from "@/types/api";
 
 const ENGINE_TYPES = ["Petrol", "Diesel", "Hybrid"] as const;
 const BODY_STYLES = ["SUV", "Sedan", "Hatchback", "MPV"] as const;
@@ -163,6 +165,45 @@ const STEP_DESCRIPTIONS = {
 	3: "Select the features you're interested in",
 	4: "How many seats do you need?",
 };
+
+interface ApiCarResponse {
+	id?: string;
+	name: string;
+	image_url?: string;
+	price: number;
+	price_formatted?: string;
+	engine_type: string;
+	body_style: string;
+	features: string[];
+	seating: number;
+	match_score?: number;
+}
+
+async function fetchRecommendations(
+	data: CustomerInput,
+): Promise<ApiCarResponse[]> {
+	console.log("fetchRecommendations data", data);
+	try {
+		const response = await fetch(API_ENDPOINTS.RECOMMEND, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		});
+
+		console.log("response", response);
+
+		if (!response.ok) {
+			throw new Error(`Error: ${response.status}`);
+		}
+
+		return await response.json();
+	} catch (error) {
+		console.error("Failed to fetch recommendations:", error);
+		throw error;
+	}
+}
 
 export function OnboardingFlow() {
 	const [step, setStep] = useState(1);
@@ -426,28 +467,54 @@ export function OnboardingFlow() {
 		// Save preferences to cookies
 		Cookies.set("userPreferences", JSON.stringify(data), { expires: 365 });
 
-		// Simulate API call to get recommended cars
-		setTimeout(() => {
-			// Show success message
-			toast({
-				title: "Preferences saved!",
-				description: "We've found some perfect matches for you.",
+		// Transform form data to API format
+		const customerInput: CustomerInput = {
+			price: 0, // We don't collect price in the form, defaulting to 0 (no limit)
+			engine_type: data.engineType,
+			body_style: data.bodyStyle,
+			seating: Number.parseInt(data.seats, 10),
+			features: data.features,
+		};
+
+		// Make API call to get recommendations
+		fetchRecommendations(customerInput)
+			.then((response) => {
+				console.log("fetchRecommendations response", response);
+				// Show success message
+				toast({
+					title: "Preferences saved!",
+					description: "We've found some perfect matches for you.",
+				});
+
+				// Transform API response format to our component format if needed
+				const matchingCars = response.map((car: ApiCarResponse) => ({
+					id: car.id || `car-${Math.random().toString(36).substr(2, 9)}`,
+					name: car.name,
+					image: car.image_url || "/cars/placeholder.jpg",
+					price: car.price_formatted || `AED ${car.price.toLocaleString()}`,
+					engineType: car.engine_type,
+					bodyStyle: car.body_style,
+					features: car.features,
+					seats: car.seating,
+					matchScore: car.match_score || Math.floor(Math.random() * 15) + 85,
+				}));
+
+				setRecommendedCars(matchingCars.length ? matchingCars : SAMPLE_CARS);
+			})
+			.catch((error) => {
+				console.error("Error fetching recommendations:", error);
+				toast({
+					title: "Something went wrong",
+					description:
+						"Could not fetch recommendations. Using sample data instead.",
+					variant: "destructive",
+				});
+				// Fallback to sample data in case of error
+				setRecommendedCars(SAMPLE_CARS);
+			})
+			.finally(() => {
+				setIsSubmitting(false);
 			});
-
-			// Filter cars based on user preferences (in a real app, this would be a server call)
-			const matchingCars = SAMPLE_CARS.filter(
-				(car) =>
-					car.engineType === data.engineType ||
-					car.bodyStyle === data.bodyStyle ||
-					car.seats === Number.parseInt(data.seats, 10) ||
-					car.features.some((feature) =>
-						data.features.includes(feature as (typeof FEATURES_POOL)[number]),
-					),
-			);
-
-			setRecommendedCars(matchingCars.length ? matchingCars : SAMPLE_CARS);
-			setIsSubmitting(false);
-		}, 2000);
 	}
 
 	if (recommendedCars) {
