@@ -1,4 +1,3 @@
-import MainLayout from "@/components/layout/MainLayout";
 import { mockVehicles } from "@/data/mockVehicles";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -17,7 +16,7 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
   }
   
   return (
-    <MainLayout>
+   
       <div className="container mx-auto py-12 px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
@@ -113,7 +112,7 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
           </div>
         </div>
       </div>
-    </MainLayout>
+   
   );
 }
 
