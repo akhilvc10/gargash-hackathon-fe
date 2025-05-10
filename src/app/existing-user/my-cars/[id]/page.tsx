@@ -51,10 +51,12 @@ export default function CarDetailPage({ params }: { params: { id: string } }) {
 					<h1 className="text-3xl font-bold tracking-tight mb-1">
 						{vehicle.year} {vehicle.make} {vehicle.model}
 					</h1>
-					<Button className="bg-primary hover:bg-primary/90">
-						<Sparkles className="mr-2 h-4 w-4" />
-						Smart Maintenance
-					</Button>
+					<Link href={`/existing-user/my-cars/${vehicle.id}/maintenance`}>
+						<Button className="bg-primary hover:bg-primary/90">
+							<Sparkles className="mr-2 h-4 w-4" />
+							Smart Maintenance
+						</Button>
+					</Link>
 				</div>
 
 				<div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">

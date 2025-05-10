@@ -75,6 +75,7 @@ export default function VehicleDiagnosticsTable({
 								>
 									<TableCell className="font-medium">
 										<button
+											type="button"
 											onClick={() => toggleGroup(item.group)}
 											className="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
 											aria-expanded={expandedGroups[item.group]}
