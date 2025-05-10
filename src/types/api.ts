@@ -30,7 +30,7 @@ export interface CarQuery {
   /** The query text */
   query: string;
   /** The model name to query about */
-  model_name: string;
+  model_name: string | null;
 }
 
 /**
@@ -52,9 +52,17 @@ export interface CustomerInput {
 /**
  * File upload format for accident analysis
  */
-export interface AccidentAnalysisRequest {
+export interface AccidentAnalysisImageRequest {
   /** The image file to analyze */
   file: File;
+}
+
+/**
+ * Query-based accident analysis request
+ */
+export interface AccidentAnalysisQueryRequest {
+  /** The text query to analyze */
+  query: string;
 }
 
 /**
@@ -62,7 +70,9 @@ export interface AccidentAnalysisRequest {
  */
 export const API_ENDPOINTS = {
   /** Analyze accident images to detect damage */
-  ANALYZE_ACCIDENT: 'https://gargash-auto.onrender.com/analyze-accident/',
+  ANALYZE_ACCIDENT_IMAGE: 'https://gargash-auto.onrender.com/analyze-accident/image',
+  /** Analyze accident through text query */
+  ANALYZE_ACCIDENT_QUERY: 'https://gargash-auto.onrender.com/analyze-accident/query',
   /** Get car information through the chatbot */
   CAR_INFO: 'https://gargash-auto.onrender.com/chatbot/car-info',
   /** Get car recommendations based on preferences */
