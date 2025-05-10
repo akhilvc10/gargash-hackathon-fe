@@ -1,0 +1,4799 @@
+{
+  "monthly_summary": [
+    {
+      "sensor_group": "Engine & Combustion System",
+      "total_anomalies": 157
+      
+    },
+    {
+      "sensor_group": "Transmission System",
+      "total_anomalies": 106
+    },
+    {
+      "sensor_group": "Braking System (ABS & EBD)",
+      "total_anomalies": 112
+    },
+    {
+      "sensor_group": "Battery & Electrical System",
+      "total_anomalies": 117
+    },
+    {
+      "sensor_group": "Tires & Suspension",
+      "total_anomalies": 73
+    },
+    {
+      "sensor_group": "HVAC System",
+      "total_anomalies": 101
+    },
+    {
+      "sensor_group": "Driving Behavior & Road Conditions",
+      "total_anomalies": 101
+    },
+    {
+      "sensor_group": "Exhaust System",
+      "total_anomalies": 102
+    },
+    {
+      "sensor_group": "Lighting & Auxiliary Systems",
+      "total_anomalies": 76
+    },
+    {
+      "sensor_group": "Odometer / Distance Sensor",
+      "total_anomalies": 91
+    }
+  ],
+  "daily_trend": [
+    {
+      "Engine & Combustion System": [
+        {
+          "Engine temperature": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "RPM (Revolutions Per Minute)": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "Throttle position": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "Mass airflow (MAF)": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 4
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "O2 sensor (Oxygen level in exhaust)": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 3
+            }
+          ]
+        },
+        {
+          "Crankshaft/Camshaft position": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 4
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 2
+            }
+          ]
+        },
+        {
+          "Fuel trim & fuel pressure": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Transmission System": [
+        {
+          "Transmission fluid temperature": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 2
+            }
+          ]
+        },
+        {
+          "Gear position sensor": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 2
+            }
+          ]
+        },
+        {
+          "Torque converter data": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "Clutch wear (via pressure or actuation)": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Braking System (ABS & EBD)": [
+        {
+          "Brake pad wear sensors": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "Wheel speed sensors (for ABS)": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 4
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "Hydraulic brake pressure": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 4
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 2
+            }
+          ]
+        },
+        {
+          "Brake fluid level sensor": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 5
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 5
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Battery & Electrical System": [
+        {
+          "Battery voltage and current": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 4
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 1
+            }
+          ]
+        },
+        {
+          "Alternator output": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "Battery temperature": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "Charging cycles": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 4
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Tires & Suspension": [
+        {
+          "Tire pressure monitoring sensors (TPMS)": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 5
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "Wheel alignment sensors": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 1
+            }
+          ]
+        },
+        {
+          "Suspension compression sensor (adaptive)": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "HVAC System": [
+        {
+          "Cabin temperature sensor": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 2
+            }
+          ]
+        },
+        {
+          "Blower motor sensor": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 1
+            }
+          ]
+        },
+        {
+          "Evaporator temperature": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 1
+            }
+          ]
+        },
+        {
+          "Refrigerant pressure sensor": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Driving Behavior & Road Conditions": [
+        {
+          "GPS and speed data": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 4
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 2
+            }
+          ]
+        },
+        {
+          "Accelerometer & Gyroscope (via telematics)": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "Hard braking / rapid acceleration events": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Exhaust System": [
+        {
+          "Catalytic converter temperature": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 4
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 4
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 6
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "NOx and CO2 emission levels": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "DPF (Diesel Particulate Filter) clog level": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Lighting & Auxiliary Systems": [
+        {
+          "Headlight & tail light status": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "Turn signal and brake light functioning": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 4
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "Wiper blade usage patterns": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Odometer / Distance Sensor": [
+        {
+          "Total kilometers/miles driven (Odometer)": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        },
+        {
+          "Trip distance": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 5
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 5
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 1
+            }
+          ]
+        },
+        {
+          "Time since last service (in km)": [
+            {
+              "date": "2025-04-10",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-11",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-12",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-13",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-14",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-15",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-04-16",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-17",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-18",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-19",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-20",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-21",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-22",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-23",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-04-24",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-25",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-26",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-27",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-28",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-04-29",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-04-30",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-01",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-02",
+              "anomalies": 3
+            },
+            {
+              "date": "2025-05-03",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-04",
+              "anomalies": 0
+            },
+            {
+              "date": "2025-05-05",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-06",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-07",
+              "anomalies": 2
+            },
+            {
+              "date": "2025-05-08",
+              "anomalies": 1
+            },
+            {
+              "date": "2025-05-09",
+              "anomalies": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
