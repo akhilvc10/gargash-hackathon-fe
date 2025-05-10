@@ -14,6 +14,7 @@ import {
 	CarFront,
 	Cog,
 	Armchair,
+	Loader2,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -37,6 +38,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
+import { RecommendedCars } from "@/components/onboarding/recommended-cars";
 
 const ENGINE_TYPES = ["Petrol", "Diesel", "Hybrid"] as const;
 const BODY_STYLES = ["SUV", "Sedan", "Hatchback", "MPV"] as const;
@@ -56,6 +58,73 @@ const FEATURES_POOL = [
 	"keyless entry",
 ] as const;
 const SEAT_OPTIONS = [2, 3, 4, 5, 6, 7] as const;
+
+// Sample recommended cars data
+interface RecommendedCar {
+	id: string;
+	name: string;
+	image: string;
+	price: string;
+	engineType: string;
+	bodyStyle: string;
+	features: string[];
+	seats: number;
+	matchScore: number;
+}
+
+const SAMPLE_CARS: RecommendedCar[] = [
+	{
+		id: "car1",
+		name: "Nissan Patrol",
+		image: "/cars/nissan-patrol.jpg",
+		price: "AED 229,900",
+		engineType: "Petrol",
+		bodyStyle: "SUV",
+		features: [
+			"leather seats",
+			"navigation",
+			"bluetooth",
+			"sunroof",
+			"rear camera",
+		],
+		seats: 7,
+		matchScore: 95,
+	},
+	{
+		id: "car2",
+		name: "Toyota Land Cruiser",
+		image: "/cars/toyota-land-cruiser.jpg",
+		price: "AED 249,000",
+		engineType: "Diesel",
+		bodyStyle: "SUV",
+		features: [
+			"leather seats",
+			"navigation",
+			"bluetooth",
+			"sunroof",
+			"lane assist",
+		],
+		seats: 7,
+		matchScore: 92,
+	},
+	{
+		id: "car3",
+		name: "BMW 5 Series",
+		image: "/cars/bmw-5-series.jpg",
+		price: "AED 315,000",
+		engineType: "Hybrid",
+		bodyStyle: "Sedan",
+		features: [
+			"leather seats",
+			"navigation",
+			"bluetooth",
+			"heated seats",
+			"lane assist",
+		],
+		seats: 5,
+		matchScore: 87,
+	},
+];
 
 const FormSchema = z.object({
 	engineType: z.enum(ENGINE_TYPES, {
@@ -97,6 +166,10 @@ const STEP_DESCRIPTIONS = {
 
 export function OnboardingFlow() {
 	const [step, setStep] = useState(1);
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [recommendedCars, setRecommendedCars] = useState<
+		RecommendedCar[] | null
+	>(null);
 	const totalSteps = 4;
 	const router = useRouter();
 	const { toast } = useToast();
@@ -122,15 +195,22 @@ export function OnboardingFlow() {
 									{ENGINE_TYPES.map((type) => {
 										const isSelected = field.value === type;
 										return (
-											<div
+											<button
 												key={type}
+												type="button"
 												className={cn(
-													"relative flex flex-col items-center rounded-xl border-2 p-6 transition-all cursor-pointer",
+													"relative flex flex-col items-center rounded-xl border-2 p-6 transition-all cursor-pointer w-full",
 													isSelected
 														? "border-primary bg-primary/5"
 														: "hover:border-muted-foreground",
 												)}
 												onClick={() => field.onChange(type)}
+												onKeyDown={(e) => {
+													if (e.key === "Enter" || e.key === " ") {
+														field.onChange(type);
+													}
+												}}
+												aria-checked={isSelected}
 											>
 												<div
 													className={cn(
@@ -154,7 +234,7 @@ export function OnboardingFlow() {
 													checked={isSelected}
 													onChange={() => field.onChange(type)}
 												/>
-											</div>
+											</button>
 										);
 									})}
 								</div>
@@ -174,15 +254,22 @@ export function OnboardingFlow() {
 									{BODY_STYLES.map((style) => {
 										const isSelected = field.value === style;
 										return (
-											<div
+											<button
 												key={style}
+												type="button"
 												className={cn(
-													"relative flex flex-col items-center rounded-xl border-2 p-6 transition-all cursor-pointer",
+													"relative flex flex-col items-center rounded-xl border-2 p-6 transition-all cursor-pointer w-full",
 													isSelected
 														? "border-primary bg-primary/5"
 														: "hover:border-muted-foreground",
 												)}
 												onClick={() => field.onChange(style)}
+												onKeyDown={(e) => {
+													if (e.key === "Enter" || e.key === " ") {
+														field.onChange(style);
+													}
+												}}
+												aria-checked={isSelected}
 											>
 												<div
 													className={cn(
@@ -206,7 +293,7 @@ export function OnboardingFlow() {
 													checked={isSelected}
 													onChange={() => field.onChange(style)}
 												/>
-											</div>
+											</button>
 										);
 									})}
 								</div>
@@ -283,15 +370,22 @@ export function OnboardingFlow() {
 										const seatValue = String(seats);
 										const isSelected = field.value === seatValue;
 										return (
-											<div
+											<button
 												key={seats}
+												type="button"
 												className={cn(
-													"relative flex flex-col items-center rounded-xl border-2 p-6 transition-all cursor-pointer",
+													"relative flex flex-col items-center rounded-xl border-2 p-6 transition-all cursor-pointer w-full",
 													isSelected
 														? "border-primary bg-primary/5"
 														: "hover:border-muted-foreground",
 												)}
 												onClick={() => field.onChange(seatValue)}
+												onKeyDown={(e) => {
+													if (e.key === "Enter" || e.key === " ") {
+														field.onChange(seatValue);
+													}
+												}}
+												aria-checked={isSelected}
 											>
 												<div
 													className={cn(
@@ -312,7 +406,7 @@ export function OnboardingFlow() {
 													checked={isSelected}
 													onChange={() => field.onChange(seatValue)}
 												/>
-											</div>
+											</button>
 										);
 									})}
 								</div>
@@ -327,17 +421,37 @@ export function OnboardingFlow() {
 	}
 
 	function onSubmit(data: FormValues) {
+		setIsSubmitting(true);
+
 		// Save preferences to cookies
 		Cookies.set("userPreferences", JSON.stringify(data), { expires: 365 });
 
-		// Show success message
-		toast({
-			title: "Preferences saved!",
-			description: "Your preferences have been saved successfully.",
-		});
+		// Simulate API call to get recommended cars
+		setTimeout(() => {
+			// Show success message
+			toast({
+				title: "Preferences saved!",
+				description: "We've found some perfect matches for you.",
+			});
 
-		// Redirect to home page
-		router.push("/");
+			// Filter cars based on user preferences (in a real app, this would be a server call)
+			const matchingCars = SAMPLE_CARS.filter(
+				(car) =>
+					car.engineType === data.engineType ||
+					car.bodyStyle === data.bodyStyle ||
+					car.seats === Number.parseInt(data.seats, 10) ||
+					car.features.some((feature) =>
+						data.features.includes(feature as (typeof FEATURES_POOL)[number]),
+					),
+			);
+
+			setRecommendedCars(matchingCars.length ? matchingCars : SAMPLE_CARS);
+			setIsSubmitting(false);
+		}, 2000);
+	}
+
+	if (recommendedCars) {
+		return <RecommendedCars cars={recommendedCars} />;
 	}
 
 	return (
@@ -503,9 +617,19 @@ export function OnboardingFlow() {
 									type="submit"
 									size="lg"
 									className="flex items-center gap-2 bg-green-600 hover:bg-green-700"
+									disabled={isSubmitting}
 								>
-									<span>Complete</span>
-									<Check className="h-4 w-4 ml-1" />
+									{isSubmitting ? (
+										<>
+											<Loader2 className="h-4 w-4 animate-spin mr-1" />
+											<span>Processing...</span>
+										</>
+									) : (
+										<>
+											<span>Complete</span>
+											<Check className="h-4 w-4 ml-1" />
+										</>
+									)}
 								</Button>
 							)}
 						</CardFooter>
