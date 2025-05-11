@@ -5,11 +5,11 @@ import {
 	Card,
 	CardContent,
 	CardDescription,
-	CardFooter,
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
 import LoadingIndicator from "@/components/loading-indicator";
+import { ArrowLeft, Settings, ShieldAlert } from "lucide-react";
 
 export const metadata: Metadata = {
 	title: "Existing User | Gargash Motors",
@@ -19,89 +19,121 @@ export const metadata: Metadata = {
 
 export default function ExistingUserPage() {
 	return (
-		<div className="container max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-			<div className="mb-12">
-				<Button asChild variant="outline" size="sm" className="mb-6">
-					<Link href="/userflow" className="flex items-center">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="16"
-							height="16"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							strokeWidth="2"
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							className="mr-2"
-							aria-hidden="true"
-						>
-							<path d="m15 18-6-6 6-6" />
-						</svg>
-						Back to options
-					</Link>
-				</Button>
+		<div className="min-h-screen bg-gradient-to-b from-background to-secondary/5">
+			<div className="container max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+				<div className="flex flex-col items-start space-y-6 mb-12">
+					<Button
+						asChild
+						variant="ghost"
+						size="sm"
+						className="group transition-all hover:translate-x-[-2px]"
+					>
+						<Link href="/userflow" className="flex items-center gap-2">
+							<ArrowLeft size={16} className="group-hover:animate-pulse" />
+							Back to options
+						</Link>
+					</Button>
 
-				<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-					Welcome Back
-				</h1>
-				<p className="mt-4 text-xl text-gray-500">
-					Manage and maintain your Gargash vehicle
-				</p>
-			</div>
-
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl">
-				{/* Smart Maintenance Card */}
-				<Card className="border-2 hover:border-secondary hover:shadow-lg transition-all duration-300 h-full">
-					<CardHeader className="text-center">
-						<div className="mx-auto mb-4 bg-secondary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center">
-							<span className="text-3xl">🔧</span>
-						</div>
-						<CardTitle className="text-2xl">Smart Maintenance</CardTitle>
-						<CardDescription>
-							AI-powered vehicle maintenance system for optimal performance
-						</CardDescription>
-					</CardHeader>
-					<CardContent className="text-center pb-6">
-						<p className="mb-6 text-muted-foreground">
-							Access real-time diagnostics, service reminders, and personalized
-							maintenance schedules tailored to your driving habits and vehicle
-							model
+					<div className="space-y-4">
+						<h1 className="text-3xl font-bold tracking-tight md:text-4xl">
+							Welcome Back
+						</h1>
+						<p className="text-lg text-muted-foreground max-w-2xl">
+							Manage and maintain your Gargash vehicle with our smart,
+							AI-powered tools
 						</p>
-						<Button asChild variant="secondary" className="w-full max-w-xs">
-							<Link href="/existing-user/my-cars">
-								View my cars
-								<LoadingIndicator variant="dark" className="ml-2 size-2" />
-							</Link>
-						</Button>
-					</CardContent>
-				</Card>
+					</div>
+				</div>
 
-				{/* Smart Garage Assistance Card */}
-				<Card className="border-2 hover:border-secondary hover:shadow-lg transition-all duration-300 h-full">
-					<CardHeader className="text-center">
-						<div className="mx-auto mb-4 bg-secondary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center">
-							<span className="text-3xl">🔍</span>
-						</div>
-						<CardTitle className="text-2xl">AI Damage Assessment</CardTitle>
-						<CardDescription>
-							Intelligent diagnostics for your vehicle
-						</CardDescription>
-					</CardHeader>
-					<CardContent className="text-center pb-6">
-						<p className="mb-6 text-muted-foreground">
-							Upload photos of vehicle damage and receive instant AI analysis,
-							repair estimates, and connections to certified repair facilities
-							near you.
-						</p>
-						<Button asChild variant="secondary" className="w-full max-w-xs">
-							<Link href="/existing-user/garage">
-								Analyze Damage
-								<LoadingIndicator variant="dark" className="ml-2 size-2" />
-							</Link>
-						</Button>
-					</CardContent>
-				</Card>
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+					{/* Smart Maintenance Card */}
+					<Card className="group relative overflow-hidden border border-muted bg-background/60 backdrop-blur-sm hover:shadow-md transition-all duration-300">
+						<div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+						<CardHeader>
+							<div className="mb-5 flex items-center gap-4">
+								<div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+									<Settings className="h-6 w-6" />
+								</div>
+								<div>
+									<CardTitle className="text-xl">Smart Maintenance</CardTitle>
+									<CardDescription className="text-sm mt-1">
+										AI-powered vehicle maintenance system
+									</CardDescription>
+								</div>
+							</div>
+						</CardHeader>
+						<CardContent className="pb-8">
+							<p className="mb-8 text-muted-foreground text-sm leading-relaxed">
+								Access real-time diagnostics, service reminders, and
+								personalized maintenance schedules tailored to your driving
+								habits and vehicle model.
+							</p>
+							<div className="flex justify-start">
+								<Button
+									asChild
+									variant="default"
+									className="relative overflow-hidden group-hover:bg-primary transition-colors"
+								>
+									<Link
+										href="/existing-user/my-cars"
+										className="flex items-center gap-2"
+									>
+										View my cars
+										<LoadingIndicator
+											variant="default"
+											className="ml-1 size-3"
+										/>
+									</Link>
+								</Button>
+							</div>
+						</CardContent>
+					</Card>
+
+					{/* AI Damage Assessment Card */}
+					<Card className="group relative overflow-hidden border border-muted bg-background/60 backdrop-blur-sm hover:shadow-md transition-all duration-300">
+						<div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+						<CardHeader>
+							<div className="mb-5 flex items-center gap-4">
+								<div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+									<ShieldAlert className="h-6 w-6" />
+								</div>
+								<div>
+									<CardTitle className="text-xl">
+										AI Damage Assessment
+									</CardTitle>
+									<CardDescription className="text-sm mt-1">
+										Intelligent diagnostics for your vehicle
+									</CardDescription>
+								</div>
+							</div>
+						</CardHeader>
+						<CardContent className="pb-8">
+							<p className="mb-8 text-muted-foreground text-sm leading-relaxed">
+								Upload photos of vehicle damage and receive instant AI analysis,
+								repair estimates, and connections to certified repair facilities
+								near you.
+							</p>
+							<div className="flex justify-start">
+								<Button
+									asChild
+									variant="default"
+									className="relative overflow-hidden group-hover:bg-primary transition-colors"
+								>
+									<Link
+										href="/existing-user/garage"
+										className="flex items-center gap-2"
+									>
+										Analyze Damage
+										<LoadingIndicator
+											variant="default"
+											className="ml-1 size-3"
+										/>
+									</Link>
+								</Button>
+							</div>
+						</CardContent>
+					</Card>
+				</div>
 			</div>
 		</div>
 	);
