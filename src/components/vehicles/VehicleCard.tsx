@@ -40,7 +40,7 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
 	return (
 		<div className="bg-white rounded-xl shadow-card overflow-hidden transition-all hover:shadow-lg">
 			<div className="relative">
-				<Link href={`/vehicles/${id}`} className="block">
+				<Link href={`/existing-user/my-cars/${id}`} className="block">
 					<img
 						src={thumbnail}
 						alt={`${make} ${model}`}
@@ -91,7 +91,7 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
 			</div>
 
 			<div className="p-4">
-				<Link href={`/vehicles/${id}`} className="block">
+				<Link href={`/existing-user/my-cars/${id}`} className="block">
 					<h3 className="font-medium text-lg text-gray-900 mb-1 truncate">
 						{title}
 					</h3>
@@ -136,7 +136,7 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
 				</div>
 
 				<Link
-					href={`/vehicles/${id}`}
+					href={`/existing-user/my-cars/${id}`}
 					className="block w-full bg-car360-blue hover:bg-car360-blue-dark text-white text-center py-2 rounded-md transition-colors"
 				>
 					View Details

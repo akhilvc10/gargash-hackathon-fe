@@ -58,17 +58,17 @@ export default function ExistingUserPage() {
 						</div>
 						<CardTitle className="text-2xl">Smart Maintenance</CardTitle>
 						<CardDescription>
-							Keep your vehicle in top condition with our smart maintenance
-							tools
+							AI-powered vehicle maintenance system for optimal performance
 						</CardDescription>
 					</CardHeader>
 					<CardContent className="text-center pb-6">
 						<p className="mb-6 text-muted-foreground">
-							Schedule service appointments, get maintenance reminders, and
-							monitor your vehicle's health.
+							Access real-time diagnostics, service reminders, and personalized
+							maintenance schedules tailored to your driving habits and vehicle
+							model
 						</p>
 						<Button asChild variant="secondary" className="w-full max-w-xs">
-							<Link href="/existing-user/my-cars">Manage Cars</Link>
+							<Link href="/existing-user/my-cars">Manage Your Vehicles</Link>
 						</Button>
 					</CardContent>
 				</Card>
@@ -77,20 +77,21 @@ export default function ExistingUserPage() {
 				<Card className="border-2 hover:border-secondary hover:shadow-lg transition-all duration-300 h-full">
 					<CardHeader className="text-center">
 						<div className="mx-auto mb-4 bg-secondary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center">
-							<span className="text-3xl">🏠</span>
+							<span className="text-3xl">🔍</span>
 						</div>
-						<CardTitle className="text-2xl">Smart Garage Assistance</CardTitle>
+						<CardTitle className="text-2xl">AI Damage Assessment</CardTitle>
 						<CardDescription>
-							Access your vehicle documents and service history
+							Intelligent diagnostics for your vehicle
 						</CardDescription>
 					</CardHeader>
 					<CardContent className="text-center pb-6">
 						<p className="mb-6 text-muted-foreground">
-							View your vehicle documents, warranty information, and complete
-							service history in one place.
+							Upload photos of vehicle damage and receive instant AI analysis,
+							repair estimates, and connections to certified repair facilities
+							near you.
 						</p>
 						<Button asChild variant="secondary" className="w-full max-w-xs">
-							<Link href="/existing-user/garage">Access Garage</Link>
+							<Link href="/existing-user/garage">Analyze Damage</Link>
 						</Button>
 					</CardContent>
 				</Card>
