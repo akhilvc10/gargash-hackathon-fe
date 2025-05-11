@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Car, ChevronRight } from "lucide-react";
+import { Car, ChevronRight, ArrowLeft } from "lucide-react";
 
 import { mockVehicles } from "@/data/mockVehicles";
 import VehicleCard from "@/components/vehicles/VehicleCard";
@@ -12,6 +12,7 @@ import {
 	CardContent,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
 	title: "My Cars | Gargash",
@@ -25,6 +26,15 @@ export default function MyCarsPage() {
 
 	return (
 		<div className="container mx-auto py-8">
+			<div className="mb-4">
+				<Button variant="ghost" size="sm" asChild className="gap-2">
+					<Link href="/existing-user">
+						<ArrowLeft className="h-4 w-4" />
+						Back
+					</Link>
+				</Button>
+			</div>
+
 			<div className="flex items-center justify-between mb-6">
 				<div>
 					<h1 className="text-3xl font-bold tracking-tight">My Gargash Cars</h1>

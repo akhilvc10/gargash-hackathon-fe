@@ -9,6 +9,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
+import LoadingIndicator from "@/components/loading-indicator";
 
 export const metadata: Metadata = {
 	title: "Existing User | Gargash Motors",
@@ -68,7 +69,10 @@ export default function ExistingUserPage() {
 							model
 						</p>
 						<Button asChild variant="secondary" className="w-full max-w-xs">
-							<Link href="/existing-user/my-cars">Manage Your Vehicles</Link>
+							<Link href="/existing-user/my-cars">
+								View my cars
+								<LoadingIndicator variant="dark" className="ml-2 size-2" />
+							</Link>
 						</Button>
 					</CardContent>
 				</Card>
@@ -91,7 +95,10 @@ export default function ExistingUserPage() {
 							near you.
 						</p>
 						<Button asChild variant="secondary" className="w-full max-w-xs">
-							<Link href="/existing-user/garage">Analyze Damage</Link>
+							<Link href="/existing-user/garage">
+								Analyze Damage
+								<LoadingIndicator variant="dark" className="ml-2 size-2" />
+							</Link>
 						</Button>
 					</CardContent>
 				</Card>

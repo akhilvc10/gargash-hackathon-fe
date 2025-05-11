@@ -59,7 +59,7 @@ const FEATURES_POOL = [
 	"heated seats",
 	"keyless entry",
 ] as const;
-const SEAT_OPTIONS = [3, 4, 5, 6, 7] as const;
+const SEAT_OPTIONS = ["3", "4", "5", "6", "7"] as const;
 
 // Sample recommended cars data
 interface RecommendedCar {
@@ -138,7 +138,7 @@ const FormSchema = z.object({
 	features: z.array(z.enum(FEATURES_POOL)).min(1, {
 		message: "Please select at least one feature",
 	}),
-	seats: z.enum(SEAT_OPTIONS.map(String) as [string, ...string[]], {
+	seats: z.enum(SEAT_OPTIONS, {
 		required_error: "Please select number of seats",
 	}),
 });
@@ -192,8 +192,8 @@ export function OnboardingFlow() {
 						control={form.control}
 						name="engineType"
 						render={({ field }) => (
-							<FormItem className="space-y-4">
-								<div className="grid gap-4 grid-cols-1 md:grid-cols-3">
+							<FormItem className="space-y-2">
+								<div className="grid gap-3 grid-cols-1 md:grid-cols-3">
 									{ENGINE_TYPES.map((type) => {
 										const isSelected = field.value === type;
 										return (
@@ -201,7 +201,7 @@ export function OnboardingFlow() {
 												key={type}
 												type="button"
 												className={cn(
-													"relative flex flex-col items-center rounded-xl border-2 p-6 transition-all cursor-pointer w-full",
+													"relative flex items-center rounded-lg border-2 p-3 transition-all cursor-pointer w-full",
 													isSelected
 														? "border-primary bg-primary/5"
 														: "hover:border-muted-foreground",
@@ -214,20 +214,19 @@ export function OnboardingFlow() {
 												}}
 												aria-checked={isSelected}
 											>
-												<div
-													className={cn(
-														"absolute top-2 right-2 transition-opacity",
-														isSelected ? "opacity-100" : "opacity-0",
-													)}
-												>
-													<Check className="h-5 w-5 text-primary" />
+												<div className="flex items-center gap-3">
+													<div className="rounded-full bg-primary/10 p-2 shrink-0">
+														<Fuel className="h-4 w-4 text-primary" />
+													</div>
+													<FormLabel className="cursor-pointer font-medium m-0">
+														{type}
+													</FormLabel>
 												</div>
-												<div className="mb-3 rounded-full bg-primary/10 p-3">
-													<Fuel className="h-6 w-6 text-primary" />
-												</div>
-												<FormLabel className="cursor-pointer font-medium text-lg">
-													{type}
-												</FormLabel>
+												{isSelected && (
+													<div className="absolute right-3">
+														<Check className="h-4 w-4 text-primary" />
+													</div>
+												)}
 												<input
 													type="radio"
 													className="sr-only"
@@ -251,8 +250,8 @@ export function OnboardingFlow() {
 						control={form.control}
 						name="bodyStyle"
 						render={({ field }) => (
-							<FormItem className="space-y-4">
-								<div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+							<FormItem className="space-y-2">
+								<div className="grid gap-3 grid-cols-2 sm:grid-cols-4">
 									{BODY_STYLES.map((style) => {
 										const isSelected = field.value === style;
 										return (
@@ -260,7 +259,7 @@ export function OnboardingFlow() {
 												key={style}
 												type="button"
 												className={cn(
-													"relative flex flex-col items-center rounded-xl border-2 p-6 transition-all cursor-pointer w-full",
+													"relative flex flex-col items-center rounded-lg border-2 py-3 px-2 transition-all cursor-pointer w-full",
 													isSelected
 														? "border-primary bg-primary/5"
 														: "hover:border-muted-foreground",
@@ -273,18 +272,15 @@ export function OnboardingFlow() {
 												}}
 												aria-checked={isSelected}
 											>
-												<div
-													className={cn(
-														"absolute top-2 right-2 transition-opacity",
-														isSelected ? "opacity-100" : "opacity-0",
-													)}
-												>
-													<Check className="h-5 w-5 text-primary" />
+												{isSelected && (
+													<div className="absolute top-1 right-1">
+														<Check className="h-3 w-3 text-primary" />
+													</div>
+												)}
+												<div className="mb-1 rounded-full bg-primary/10 p-2">
+													<CarFront className="h-4 w-4 text-primary" />
 												</div>
-												<div className="mb-3 rounded-full bg-primary/10 p-3">
-													<CarFront className="h-6 w-6 text-primary" />
-												</div>
-												<FormLabel className="cursor-pointer font-medium text-lg">
+												<FormLabel className="cursor-pointer font-medium text-sm m-0">
 													{style}
 												</FormLabel>
 												<input
@@ -311,7 +307,7 @@ export function OnboardingFlow() {
 						name="features"
 						render={() => (
 							<FormItem>
-								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+								<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
 									{FEATURES_POOL.map((feature) => (
 										<FormField
 											key={feature}
@@ -322,7 +318,7 @@ export function OnboardingFlow() {
 													<FormItem
 														key={feature}
 														className={cn(
-															"flex flex-row items-start space-x-3 space-y-0 rounded-lg border-2 p-4 transition-all",
+															"flex items-start space-x-2 space-y-0 rounded-md border p-2 transition-all",
 															field.value?.includes(feature)
 																? "border-primary bg-primary/5"
 																: "hover:border-muted-foreground",
@@ -340,11 +336,11 @@ export function OnboardingFlow() {
 																				),
 																			);
 																}}
-																className="mt-1"
+																className="mt-0.5"
 															/>
 														</FormControl>
-														<div className="space-y-1">
-															<FormLabel className="font-medium cursor-pointer">
+														<div>
+															<FormLabel className="font-medium cursor-pointer text-sm">
 																{feature.charAt(0).toUpperCase() +
 																	feature.slice(1)}
 															</FormLabel>
@@ -355,7 +351,7 @@ export function OnboardingFlow() {
 										/>
 									))}
 								</div>
-								<FormMessage className="mt-3" />
+								<FormMessage className="mt-2" />
 							</FormItem>
 						)}
 					/>
@@ -366,47 +362,43 @@ export function OnboardingFlow() {
 						control={form.control}
 						name="seats"
 						render={({ field }) => (
-							<FormItem className="space-y-4">
-								<div className="grid gap-4 grid-cols-3 sm:grid-cols-6">
+							<FormItem className="space-y-2">
+								<div className="flex flex-wrap gap-2 justify-between">
 									{SEAT_OPTIONS.map((seats) => {
-										const seatValue = String(seats);
-										const isSelected = field.value === seatValue;
+										const isSelected = field.value === seats;
 										return (
 											<button
 												key={seats}
 												type="button"
 												className={cn(
-													"relative flex flex-col items-center rounded-xl border-2 p-6 transition-all cursor-pointer w-full",
+													"relative flex items-center justify-center rounded-lg border-2 w-16 h-16 transition-all cursor-pointer",
 													isSelected
 														? "border-primary bg-primary/5"
 														: "hover:border-muted-foreground",
 												)}
-												onClick={() => field.onChange(seatValue)}
+												onClick={() => field.onChange(seats)}
 												onKeyDown={(e) => {
 													if (e.key === "Enter" || e.key === " ") {
-														field.onChange(seatValue);
+														field.onChange(seats);
 													}
 												}}
 												aria-checked={isSelected}
 											>
-												<div
-													className={cn(
-														"absolute top-2 right-2 transition-opacity",
-														isSelected ? "opacity-100" : "opacity-0",
-													)}
-												>
-													<Check className="h-5 w-5 text-primary" />
-												</div>
-												<FormLabel className="cursor-pointer font-medium text-lg">
+												{isSelected && (
+													<div className="absolute top-1 right-1">
+														<Check className="h-3 w-3 text-primary" />
+													</div>
+												)}
+												<FormLabel className="cursor-pointer font-medium text-lg m-0">
 													{seats}
 												</FormLabel>
 												<input
 													type="radio"
 													className="sr-only"
 													{...field}
-													value={seatValue}
+													value={seats}
 													checked={isSelected}
-													onChange={() => field.onChange(seatValue)}
+													onChange={() => field.onChange(seats)}
 												/>
 											</button>
 										);
@@ -508,141 +500,101 @@ export function OnboardingFlow() {
 	}
 
 	return (
-		<div className="w-full max-w-4xl mx-auto py-8 px-4">
+		<div className="w-full max-w-3xl mx-auto py-4 px-3">
 			<Form {...form}>
-				<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-					<div className="relative">
-						<div className="mb-10">
-							<div className="relative mb-6">
-								<Progress
-									value={(step / totalSteps) * 100}
-									className="h-3 w-full bg-muted rounded-full"
-								/>
-								<div
-									className="absolute top-0 left-0 h-3 bg-gradient-to-r from-primary/80 to-primary rounded-full transition-all duration-300 ease-in-out"
-									style={{ width: `${(step / totalSteps) * 100}%` }}
-									aria-hidden="true"
-								/>
-							</div>
+				<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+					<div className="mb-4">
+						<Progress
+							value={(step / totalSteps) * 100}
+							className="h-2 w-full bg-muted rounded-full"
+						/>
 
-							<div className="mt-8 flex items-center justify-between max-w-xl mx-auto">
-								{Array.from({ length: totalSteps }).map((_, index) => {
-									const stepNumber = index + 1;
-									const StepIconComponent =
-										STEP_ICONS[stepNumber as keyof typeof STEP_ICONS];
-									const isCompleted = step > stepNumber;
-									const isCurrent = step === stepNumber;
+						<div className="mt-4 grid grid-cols-4 gap-1 text-xs">
+							{Array.from({ length: totalSteps }).map((_, index) => {
+								const stepNumber = index + 1;
+								const StepIconComponent =
+									STEP_ICONS[stepNumber as keyof typeof STEP_ICONS];
+								const isCompleted = step > stepNumber;
+								const isCurrent = step === stepNumber;
 
-									return (
-										<button
-											key={`step-${stepNumber}`}
-											type="button"
-											onClick={() => {
-												// Only allow going back or to completed steps
-												if (stepNumber <= step) {
-													setStep(stepNumber);
-												}
-											}}
+								return (
+									<div
+										key={`step-${stepNumber}`}
+										className={cn(
+											"flex flex-col items-center",
+											stepNumber <= step ? "" : "opacity-50",
+										)}
+										aria-current={isCurrent ? "step" : undefined}
+									>
+										<div
 											className={cn(
-												"flex flex-col items-center gap-2 transition-all",
-												stepNumber <= step
-													? "cursor-pointer"
-													: "cursor-not-allowed opacity-50",
-											)}
-											disabled={stepNumber > step}
-											aria-current={isCurrent ? "step" : undefined}
-											aria-label={`${STEP_TITLES[stepNumber as keyof typeof STEP_TITLES]} ${
+												"flex items-center justify-center h-8 w-8 rounded-full border transition-all mb-1",
 												isCompleted
-													? "(completed)"
+													? "border-primary bg-primary text-primary-foreground"
 													: isCurrent
-														? "(current step)"
-														: "(upcoming step)"
-											}`}
+														? "border-primary bg-primary/10 text-primary"
+														: "border-muted bg-muted/20 text-muted-foreground",
+											)}
 										>
-											<div
-												className={cn(
-													"flex items-center justify-center h-14 w-14 rounded-full border-2 transition-all duration-300",
-													isCompleted
-														? "border-primary bg-primary text-primary-foreground scale-100"
-														: isCurrent
-															? "border-primary bg-primary/10 text-primary scale-110 shadow-md"
-															: "border-muted bg-muted/20 text-muted-foreground scale-90",
-												)}
-											>
-												{isCompleted ? (
-													<Check className="h-7 w-7" />
-												) : (
-													<StepIconComponent className="h-7 w-7" />
-												)}
-											</div>
-											<div className="flex flex-col items-center">
-												<span
-													className={cn(
-														"text-xs font-bold uppercase tracking-wider",
-														isCurrent
-															? "text-primary"
-															: isCompleted
-																? "text-foreground"
-																: "text-muted-foreground",
-													)}
-												>
-													Step {stepNumber}
-												</span>
-												<span
-													className={cn(
-														"text-sm font-medium text-center hidden sm:block",
-														isCurrent
-															? "text-primary"
-															: isCompleted
-																? "text-foreground"
-																: "text-muted-foreground",
-													)}
-												>
-													{STEP_TITLES[stepNumber as keyof typeof STEP_TITLES]}
-												</span>
-											</div>
-										</button>
-									);
-								})}
-							</div>
+											{isCompleted ? (
+												<Check className="h-4 w-4" />
+											) : (
+												<StepIconComponent className="h-4 w-4" />
+											)}
+										</div>
+										<span
+											className={cn(
+												"font-medium text-center",
+												isCurrent
+													? "text-primary"
+													: isCompleted
+														? "text-foreground"
+														: "text-muted-foreground",
+											)}
+										>
+											{STEP_TITLES[stepNumber as keyof typeof STEP_TITLES]}
+										</span>
+									</div>
+								);
+							})}
 						</div>
 					</div>
 
-					<Card className="border-2 shadow-lg">
-						<CardHeader className="pb-2">
-							<div className="flex items-center gap-3">
-								<div className="rounded-full bg-primary/10 p-2">
-									<StepIcon className="h-6 w-6 text-primary" />
+					<Card className="shadow-sm">
+						<CardHeader className="p-4 pb-2 space-y-1">
+							<div className="flex items-center gap-2">
+								<div className="rounded-full bg-primary/10 p-1.5 shrink-0">
+									<StepIcon className="h-4 w-4 text-primary" />
 								</div>
 								<div>
-									<CardTitle className="text-2xl font-bold">
+									<CardTitle className="text-lg">
 										{STEP_TITLES[step as keyof typeof STEP_TITLES]}
 									</CardTitle>
-									<CardDescription className="text-base">
+									<CardDescription className="text-sm">
 										{STEP_DESCRIPTIONS[step as keyof typeof STEP_DESCRIPTIONS]}
 									</CardDescription>
 								</div>
 							</div>
 						</CardHeader>
-						<CardContent className="pt-6">{renderStep()}</CardContent>
-						<CardFooter className="flex justify-between pt-6 border-t">
+						<CardContent className="p-4 pt-3">{renderStep()}</CardContent>
+						<CardFooter className="flex justify-between p-4 border-t">
 							<Button
 								type="button"
 								variant="outline"
 								onClick={() => setStep((prev) => Math.max(prev - 1, 1))}
 								disabled={step === 1}
-								className="flex items-center gap-2"
-								size="lg"
+								className="flex items-center gap-1"
+								size="sm"
 							>
 								<ChevronLeft className="h-4 w-4" />
-								<span>Previous</span>
+								<span>Back</span>
 							</Button>
 
 							{step < totalSteps ? (
 								<Button
 									type="button"
-									size="lg"
-									className="flex items-center gap-2"
+									size="sm"
+									className="flex items-center gap-1"
 									onClick={() => {
 										const currentFieldName =
 											step === 1
@@ -668,19 +620,19 @@ export function OnboardingFlow() {
 							) : (
 								<Button
 									type="submit"
-									size="lg"
-									className="flex items-center gap-2 bg-green-600 hover:bg-green-700"
+									size="sm"
+									className="flex items-center gap-1 bg-green-600 hover:bg-green-700"
 									disabled={isSubmitting}
 								>
 									{isSubmitting ? (
 										<>
-											<Loader2 className="h-4 w-4 animate-spin mr-1" />
-											<span>Processing...</span>
+											<Loader2 className="h-3 w-3 animate-spin" />
+											<span>Processing</span>
 										</>
 									) : (
 										<>
 											<span>Complete</span>
-											<Check className="h-4 w-4 ml-1" />
+											<Check className="h-3 w-3" />
 										</>
 									)}
 								</Button>
