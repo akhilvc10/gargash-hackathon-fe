@@ -3,184 +3,6 @@ import { Vehicle } from "../types/vehicle";
 export const mockVehicles: Vehicle[] = [
   {
     id: "v1",
-    make: "Tesla",
-    model: "Model Y",
-    year: 2025,
-    title: "Tesla Model Y Long Range",
-    description: "Experience the future of driving with the Tesla Model Y Long Range. This all-electric SUV offers impressive range, cutting-edge technology, and exceptional performance in a versatile package.",
-    price: 58990,
-    priceType: "Starting at",
-    thumbnail: "https://images.unsplash.com/photo-1617788138017-80ad40651399?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1617788138017-80ad40651399?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1617704548623-340376564e68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1619011455237-fbda7ee2469a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-    ],
-    availableModes: ["buy", "lease"],
-    bodyStyle: "suv",
-    fuelType: "electric",
-    mileage: 0,
-    color: "Pearl White",
-    interiorColor: "Black",
-    condition: "new",
-    rating: 4.9,
-    specs: {
-      engine: "Dual Motor Electric",
-      transmission: "Single-Speed Fixed Gear",
-      horsepower: 384,
-      torque: "376 lb-ft",
-      fuelEconomy: "129 MPGe City / 112 MPGe Highway",
-      acceleration: "0-60 mph in 4.8 seconds",
-      drivetrain: "All-Wheel Drive"
-    },
-    features: [
-      {
-        category: "Safety",
-        items: [
-          "Autopilot",
-          "Adaptive Cruise Control",
-          "Automatic Emergency Braking",
-          "Lane Departure Warning",
-          "360° Cameras"
-        ]
-      },
-      {
-        category: "Technology",
-        items: [
-          "15-inch Touchscreen",
-          "Wireless Phone Charging",
-          "Premium Audio System",
-          "Voice Commands",
-          "Over-the-Air Updates"
-        ]
-      },
-      {
-        category: "Comfort",
-        items: [
-          "Heated Seats (Front & Rear)",
-          "Panoramic Glass Roof",
-          "Dual-Zone Climate Control",
-          "Power-Adjustable Seats",
-          "HEPA Air Filtration"
-        ]
-      }
-    ],
-    pricing: {
-      buy: {
-        msrp: 58990,
-        offer: 57500,
-        downPayment: 5000,
-        monthlyPayment: 789,
-        apr: 2.99,
-        term: 72
-      },
-      lease: {
-        monthlyPayment: 599,
-        downPayment: 3000,
-        term: 36,
-        mileageLimit: 12000,
-        residualValue: 34000
-      }
-    },
-    stock: 5,
-    location: "Dubai Motor City",
-    dealershipId: "d1",
-    dealershipName: "Premium EV Dubai"
-  },
-  {
-    id: "v2",
-    make: "BMW",
-    model: "X5",
-    year: 2025,
-    title: "BMW X5 xDrive40i",
-    description: "The BMW X5 combines luxury, technology and dynamic driving performance. With its powerful engine, premium interior and cutting-edge features, it delivers an exceptional driving experience.",
-    price: 62500,
-    priceType: "Starting at",
-    thumbnail: "https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1523983302122-73e869e1f850?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1601362840469-54ea53d2d5d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-    ],
-    availableModes: ["buy", "lease", "rent"],
-    bodyStyle: "suv",
-    fuelType: "petrol",
-    mileage: 0,
-    color: "Alpine White",
-    interiorColor: "Ivory White",
-    condition: "new",
-    rating: 4.8,
-    specs: {
-      engine: "3.0L TwinPower Turbo inline 6-cylinder",
-      transmission: "8-speed Automatic",
-      horsepower: 335,
-      torque: "331 lb-ft",
-      fuelEconomy: "21 City / 26 Highway",
-      acceleration: "0-60 mph in 5.3 seconds",
-      drivetrain: "All-Wheel Drive"
-    },
-    features: [
-      {
-        category: "Safety",
-        items: [
-          "Active Protection System",
-          "Driving Assistant Professional",
-          "Parking Assistant Plus",
-          "Surround View with 3D View",
-          "Active Blind Spot Detection"
-        ]
-      },
-      {
-        category: "Technology",
-        items: [
-          "12.3-inch Digital Instrument Cluster",
-          "12.3-inch Central Information Display",
-          "BMW Intelligent Personal Assistant",
-          "Wireless Apple CarPlay and Android Auto",
-          "Head-Up Display"
-        ]
-      },
-      {
-        category: "Comfort",
-        items: [
-          "Vernasca Leather Upholstery",
-          "16-way Power Front Seats",
-          "4-Zone Climate Control",
-          "Panoramic Moonroof",
-          "Harman Kardon Surround Sound System"
-        ]
-      }
-    ],
-    pricing: {
-      buy: {
-        msrp: 62500,
-        offer: 60900,
-        downPayment: 6000,
-        monthlyPayment: 899,
-        apr: 3.49,
-        term: 60
-      },
-      lease: {
-        monthlyPayment: 699,
-        downPayment: 4500,
-        term: 36,
-        mileageLimit: 10000,
-        residualValue: 37500
-      },
-      rent: {
-        dailyRate: 189,
-        weeklyRate: 1150,
-        monthlyRate: 3990,
-        deposit: 2000
-      }
-    },
-    stock: 3,
-    location: "Dubai Festival City",
-    dealershipId: "d2",
-    dealershipName: "AGMC BMW"
-  },
-  {
-    id: "v3",
     make: "Mercedes-Benz",
     model: "EQS",
     year: 2025,
@@ -188,9 +10,9 @@ export const mockVehicles: Vehicle[] = [
     description: "The Mercedes-Benz EQS redefines electric luxury with its aerodynamic design, impressive range, and opulent interior. Experience the pinnacle of automotive innovation and sustainable mobility.",
     price: 125900,
     priceType: "Starting at",
-    thumbnail: "https://images.unsplash.com/photo-1633509817673-56be69f4a6ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    thumbnail: "https://images.unsplash.com/photo-1668248835473-c2f28c752663?q=80&w=3131&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     images: [
-      "https://images.unsplash.com/photo-1633509817673-56be69f4a6ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1668248835473-c2f28c752663?q=80&w=3131&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1618843479419-1dfa0357e424?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
     ],
@@ -264,5 +86,183 @@ export const mockVehicles: Vehicle[] = [
     location: "Dubai Sheikh Zayed Road",
     dealershipId: "d3",
     dealershipName: "Gargash Mercedes-Benz"
+  },
+  {
+    id: "v2",
+    make: "Mercedes-Benz",
+    model: "C-Class",
+    year: 2025,
+    title: "Mercedes-Benz C300 4MATIC",
+    description: "The Mercedes-Benz C-Class delivers sophisticated style, advanced technology, and refined performance in a compact luxury sedan package. Experience German engineering at its finest.",
+    price: 48500,
+    priceType: "Starting at",
+    thumbnail: "https://images.unsplash.com/photo-1686562483617-3cf08d81e117?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    images: [
+      "https://images.unsplash.com/photo-1686562483617-3cf08d81e117?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1618843479419-1dfa0357e424?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+    ],
+    availableModes: ["buy", "lease", "rent"],
+    bodyStyle: "sedan",
+    fuelType: "petrol",
+    mileage: 0,
+    color: "Polar White",
+    interiorColor: "Black MB-Tex",
+    condition: "new",
+    rating: 4.7,
+    specs: {
+      engine: "2.0L Turbocharged Inline-4",
+      transmission: "9-speed Automatic",
+      horsepower: 255,
+      torque: "295 lb-ft",
+      fuelEconomy: "23 City / 33 Highway",
+      acceleration: "0-60 mph in 5.9 seconds",
+      drivetrain: "All-Wheel Drive"
+    },
+    features: [
+      {
+        category: "Safety",
+        items: [
+          "Active Brake Assist",
+          "Blind Spot Assist",
+          "ATTENTION ASSIST®",
+          "PRE-SAFE®",
+          "Crosswind Assist"
+        ]
+      },
+      {
+        category: "Technology",
+        items: [
+          "11.9-inch Central Touchscreen",
+          "12.3-inch Digital Instrument Cluster",
+          "MBUX Infotainment System",
+          "Wireless Smartphone Integration",
+          "Fingerprint Scanner"
+        ]
+      },
+      {
+        category: "Comfort",
+        items: [
+          "Power Front Seats with Memory",
+          "Heated Front Seats",
+          "Dual-Zone Climate Control",
+          "64-Color Ambient Lighting",
+          "Burmester® Surround Sound System"
+        ]
+      }
+    ],
+    pricing: {
+      buy: {
+        msrp: 48500,
+        offer: 47200,
+        downPayment: 5000,
+        monthlyPayment: 699,
+        apr: 2.99,
+        term: 60
+      },
+      lease: {
+        monthlyPayment: 499,
+        downPayment: 3500,
+        term: 36,
+        mileageLimit: 10000,
+        residualValue: 29100
+      },
+      rent: {
+        dailyRate: 149,
+        weeklyRate: 890,
+        monthlyRate: 2990,
+        deposit: 1500
+      }
+    },
+    stock: 5,
+    location: "Dubai Sheikh Zayed Road",
+    dealershipId: "d3",
+    dealershipName: "Gargash Mercedes-Benz"
+  },
+  {
+    id: "v3",
+    make: "Alfa Romeo",
+    model: "Giulia",
+    year: 2025,
+    title: "Alfa Romeo Giulia Quadrifoglio",
+    description: "The Alfa Romeo Giulia Quadrifoglio combines Italian craftsmanship with exhilarating performance. With its powerful engine, precise handling, and distinctive styling, it delivers a driving experience like no other.",
+    price: 79900,
+    priceType: "Starting at",
+    thumbnail: "https://images.unsplash.com/photo-1577494998472-199727fdc041?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    images: [
+      "https://images.unsplash.com/photo-1577494998472-199727fdc041?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1581650107963-3e8c1f48241b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1581650107963-7bed89fb6593?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+    ],
+    availableModes: ["buy", "lease"],
+    bodyStyle: "sedan",
+    fuelType: "petrol",
+    mileage: 0,
+    color: "Rosso Alfa",
+    interiorColor: "Black Leather with Red Stitching",
+    condition: "new",
+    rating: 4.8,
+    specs: {
+      engine: "2.9L Twin-Turbo V6",
+      transmission: "8-speed Automatic",
+      horsepower: 505,
+      torque: "443 lb-ft",
+      fuelEconomy: "17 City / 25 Highway",
+      acceleration: "0-60 mph in 3.8 seconds",
+      drivetrain: "Rear-Wheel Drive"
+    },
+    features: [
+      {
+        category: "Safety",
+        items: [
+          "Forward Collision Warning",
+          "Autonomous Emergency Braking",
+          "Lane Departure Warning",
+          "Blind Spot Monitoring",
+          "Adaptive Cruise Control"
+        ]
+      },
+      {
+        category: "Technology",
+        items: [
+          "8.8-inch Touchscreen Infotainment",
+          "Wireless Apple CarPlay and Android Auto",
+          "Harman Kardon Premium Audio",
+          "7-inch TFT Instrument Cluster",
+          "Alfa Connect Services"
+        ]
+      },
+      {
+        category: "Performance",
+        items: [
+          "Alfa DNA Pro Drive Mode Selector",
+          "Torque Vectoring Differential",
+          "Active Suspension",
+          "Carbon Ceramic Brakes",
+          "Carbon Fiber Components"
+        ]
+      }
+    ],
+    pricing: {
+      buy: {
+        msrp: 79900,
+        offer: 78500,
+        downPayment: 8000,
+        monthlyPayment: 1099,
+        apr: 3.49,
+        term: 60
+      },
+      lease: {
+        monthlyPayment: 899,
+        downPayment: 6000,
+        term: 36,
+        mileageLimit: 10000,
+        residualValue: 47900
+      }
+    },
+    stock: 1,
+    location: "Dubai Motor City",
+    dealershipId: "d4",
+    dealershipName: "Alfa Romeo Dubai"
   }
 ]; 

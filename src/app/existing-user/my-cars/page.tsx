@@ -27,7 +27,7 @@ export default function MyCarsPage() {
 		<div className="container mx-auto py-8">
 			<div className="flex items-center justify-between mb-6">
 				<div>
-					<h1 className="text-3xl font-bold tracking-tight">My Cars</h1>
+					<h1 className="text-3xl font-bold tracking-tight">My Gargash Cars</h1>
 					<p className="text-muted-foreground mt-1">
 						View and manage all of your purchased vehicles
 					</p>

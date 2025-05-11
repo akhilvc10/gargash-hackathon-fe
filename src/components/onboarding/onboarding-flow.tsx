@@ -59,7 +59,7 @@ const FEATURES_POOL = [
 	"heated seats",
 	"keyless entry",
 ] as const;
-const SEAT_OPTIONS = [2, 3, 4, 5, 6, 7] as const;
+const SEAT_OPTIONS = [3, 4, 5, 6, 7] as const;
 
 // Sample recommended cars data
 interface RecommendedCar {
