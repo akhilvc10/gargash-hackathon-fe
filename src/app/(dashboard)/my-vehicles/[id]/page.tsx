@@ -35,15 +35,7 @@ import { mockVehicles } from "@/data/mockVehicles";
 import { formatCurrency } from "@/lib/utils";
 import AnomalyDashboard from "@/components/anomalies/anomaly-dashboard";
 
-interface VehicleDetailPageProps {
-	params: {
-		id: string;
-	};
-}
-
-export async function generateMetadata({
-	params,
-}: VehicleDetailPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }) {
 	const vehicle = mockVehicles.find((v) => v.id === params.id);
 
 	if (!vehicle) {
@@ -58,7 +50,7 @@ export async function generateMetadata({
 	};
 }
 
-export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
+export default function VehicleDetailPage({ params }) {
 	const vehicle = mockVehicles.find((v) => v.id === params.id);
 
 	if (!vehicle) {
