@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -39,8 +39,8 @@ import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { RecommendedCars } from "@/components/onboarding/recommended-cars";
-import { API_ENDPOINTS } from "@/types/api";
 import type { CustomerInput } from "@/types/api";
+import { getCarRecommendations } from "@/app/api/car-recommendation/actions";
 
 const ENGINE_TYPES = ["Petrol", "Diesel", "Hybrid"] as const;
 const BODY_STYLES = ["SUV", "Sedan", "Hatchback", "MPV"] as const;
@@ -165,45 +165,6 @@ const STEP_DESCRIPTIONS = {
 	3: "Select the features you're interested in",
 	4: "How many seats do you need?",
 };
-
-interface ApiCarResponse {
-	id?: string;
-	name: string;
-	image_url?: string;
-	price: number;
-	price_formatted?: string;
-	engine_type: string;
-	body_style: string;
-	features: string[];
-	seating: number;
-	match_score?: number;
-}
-
-async function fetchRecommendations(
-	data: CustomerInput,
-): Promise<ApiCarResponse[]> {
-	console.log("fetchRecommendations data", data);
-	try {
-		const response = await fetch(API_ENDPOINTS.RECOMMEND, {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(data),
-		});
-
-		console.log("response", response);
-
-		if (!response.ok) {
-			throw new Error(`Error: ${response.status}`);
-		}
-
-		return await response.json();
-	} catch (error) {
-		console.error("Failed to fetch recommendations:", error);
-		throw error;
-	}
-}
 
 export function OnboardingFlow() {
 	const [step, setStep] = useState(1);
@@ -476,30 +437,55 @@ export function OnboardingFlow() {
 			features: data.features,
 		};
 
-		// Make API call to get recommendations
-		fetchRecommendations(customerInput)
+		// Use server action to get recommendations
+		getCarRecommendations(customerInput)
 			.then((response) => {
-				console.log("fetchRecommendations response", response);
+				console.log("Car recommendations response:", response);
+
+				if (!response.success) {
+					throw new Error(response.error || "Failed to get recommendations");
+				}
+
+				// Store the response in localStorage
+				if (typeof window !== "undefined" && response.top_recommendations) {
+					localStorage.setItem(
+						"carRecommendations",
+						JSON.stringify(response.top_recommendations),
+					);
+				}
+
 				// Show success message
 				toast({
 					title: "Preferences saved!",
 					description: "We've found some perfect matches for you.",
 				});
 
-				// Transform API response format to our component format if needed
-				const matchingCars = response.map((car: ApiCarResponse) => ({
-					id: car.id || `car-${Math.random().toString(36).substr(2, 9)}`,
-					name: car.name,
-					image: car.image_url || "/cars/placeholder.jpg",
-					price: car.price_formatted || `AED ${car.price.toLocaleString()}`,
-					engineType: car.engine_type,
-					bodyStyle: car.body_style,
-					features: car.features,
-					seats: car.seating,
-					matchScore: car.match_score || Math.floor(Math.random() * 15) + 85,
-				}));
+				// Transform API response format to our component format
+				if (
+					response.top_recommendations &&
+					response.top_recommendations.length > 0
+				) {
+					const matchingCars = response.top_recommendations.map((car) => ({
+						id: `car-${Math.random().toString(36).substr(2, 9)}`,
+						name: car.car_model,
+						image: "/cars/placeholder.jpg", // Use placeholder as API doesn't provide images
+						price: `AED ${Math.floor(Math.random() * 500000) + 100000}`, // Sample price as API doesn't provide prices
+						engineType: car.specs.Engine.split(",")[0],
+						bodyStyle: "SUV", // Default as API doesn't provide body style in specs
+						features: Object.values(car.specs).filter(
+							(spec): spec is string =>
+								typeof spec === "string" &&
+								spec.toLowerCase().includes("sunroof"),
+						),
+						seats: 5, // Default as API doesn't provide seating in specs
+						matchScore: Math.floor(car.probability * 100),
+					}));
 
-				setRecommendedCars(matchingCars.length ? matchingCars : SAMPLE_CARS);
+					setRecommendedCars(matchingCars);
+				} else {
+					// Fallback to sample data if no recommendations
+					setRecommendedCars(SAMPLE_CARS);
+				}
 			})
 			.catch((error) => {
 				console.error("Error fetching recommendations:", error);

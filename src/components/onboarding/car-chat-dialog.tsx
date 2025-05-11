@@ -14,6 +14,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import { fetchCarInfo } from "@/lib/api";
+import { toast } from "@/components/ui/use-toast";
 
 interface RecommendedCar {
 	id: string;
@@ -40,9 +42,36 @@ interface QuickReply {
 	text: string;
 }
 
+interface CarApiResponse {
+	user_answer: string;
+	offer_types?: {
+		leasing?: {
+			description: string;
+		};
+		buying?: {
+			description: string;
+		};
+	};
+}
+
 interface CarChatDialogProps {
 	car: RecommendedCar | null;
 }
+
+// Helper function to format message with bold text
+const formatMessageWithBold = (text: string) => {
+	return text.split(/(\*\*.*?\*\*)/g).map((part, index) => {
+		// Create a more unique key using text content and index
+		const key = `${part.substring(0, 10)}-${index}`;
+
+		if (part.startsWith("**") && part.endsWith("**")) {
+			// Extract text between ** and return as bold
+			const boldText = part.slice(2, -2);
+			return <strong key={key}>{boldText}</strong>;
+		}
+		return <span key={key}>{part}</span>;
+	});
+};
 
 export function CarChatDialog({ car }: CarChatDialogProps) {
 	const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
@@ -56,6 +85,12 @@ export function CarChatDialog({ car }: CarChatDialogProps) {
 		scrollToBottom();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
+
+	// Update to scroll when messages or typing state changes
+	useEffect(() => {
+		scrollToBottom();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [chatMessages.length, isTyping]);
 
 	const scrollToBottom = () => {
 		messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -115,7 +150,7 @@ export function CarChatDialog({ car }: CarChatDialogProps) {
 	};
 
 	// Handle sending a message
-	const handleSendMessage = (text = messageInput) => {
+	const handleSendMessage = async (text = messageInput) => {
 		if (!text.trim() || !car) return;
 
 		// Add user message
@@ -134,61 +169,63 @@ export function CarChatDialog({ car }: CarChatDialogProps) {
 		// Show typing indicator
 		setIsTyping(true);
 
-		// Simulate AI response with delay
-		setTimeout(() => {
-			const botResponse = generateBotResponse(text, car);
+		try {
+			// Call the API for a response
+			const response = await fetchCarInfo(text, car.name);
+			const botResponse = processApiResponse(response);
+
 			const botMessage: ChatMessage = {
 				id: (Date.now() + 1).toString(),
 				content: botResponse,
 				isBot: true,
 				timestamp: new Date(),
 			};
+
 			setChatMessages((prev) => [...prev, botMessage]);
-			setIsTyping(false);
-			scrollToBottom();
 
 			// Generate new quick replies based on context
 			generateQuickReplies(text, car);
-		}, 1000);
-	};
+		} catch (error) {
+			console.error("Error fetching car info:", error);
+			toast.error("Failed to get a response. Please try again.");
 
-	// Generate quick replies based on context
-	const generateQuickReplies = (lastMessage: string, car: RecommendedCar) => {
-		const messageLC = lastMessage.toLowerCase();
+			// Fallback to mock response in case of error
+			const fallbackResponse = generateFallbackResponse(text, car);
+			const botMessage: ChatMessage = {
+				id: (Date.now() + 1).toString(),
+				content: fallbackResponse,
+				isBot: true,
+				timestamp: new Date(),
+			};
 
-		// Default quick replies
-		const defaultReplies = [
-			{ id: "qr1", text: "Tell me about features" },
-			{ id: "qr2", text: "How can I test drive?" },
-			{ id: "qr3", text: "Financing options" },
-		];
-
-		// Context-specific quick replies
-		if (messageLC.includes("price") || messageLC.includes("cost")) {
-			setQuickReplies([
-				{ id: "qr1", text: "Financing options" },
-				{ id: "qr2", text: "Any current promotions?" },
-				{ id: "qr3", text: "Compare with other models" },
-			]);
-		} else if (messageLC.includes("engine") || messageLC.includes("power")) {
-			setQuickReplies([
-				{ id: "qr1", text: "Fuel efficiency?" },
-				{ id: "qr2", text: "Performance specs" },
-				{ id: "qr3", text: "Maintenance costs" },
-			]);
-		} else if (messageLC.includes("test drive")) {
-			setQuickReplies([
-				{ id: "qr1", text: "Schedule for tomorrow" },
-				{ id: "qr2", text: "Which location?" },
-				{ id: "qr3", text: "Documents needed?" },
-			]);
-		} else {
-			setQuickReplies(defaultReplies);
+			setChatMessages((prev) => [...prev, botMessage]);
+			generateQuickReplies(text, car);
+		} finally {
+			setIsTyping(false);
+			scrollToBottom();
 		}
 	};
 
-	// Generate a bot response based on the message
-	const generateBotResponse = (
+	// Process the API response into a formatted message
+	const processApiResponse = (response: CarApiResponse): string => {
+		let message = response.user_answer;
+
+		// Add offer information if available
+		if (response.offer_types) {
+			if (response.offer_types.leasing?.description) {
+				message += `\n\n**Leasing Option:**\n${response.offer_types.leasing.description}`;
+			}
+
+			if (response.offer_types.buying?.description) {
+				message += `\n\n**Buying Option:**\n${response.offer_types.buying.description}`;
+			}
+		}
+
+		return message;
+	};
+
+	// Generate a fallback response in case API fails
+	const generateFallbackResponse = (
 		message: string,
 		car: RecommendedCar,
 	): string => {
@@ -244,6 +281,50 @@ export function CarChatDialog({ car }: CarChatDialogProps) {
 		return `I'd be happy to tell you more about the ${car.name}. You can ask about its features, pricing, engine specifications, or anything else you'd like to know.`;
 	};
 
+	// Generate quick replies based on context
+	const generateQuickReplies = (lastMessage: string, car: RecommendedCar) => {
+		const messageLC = lastMessage.toLowerCase();
+
+		// Default quick replies
+		const defaultReplies = [
+			{ id: "qr1", text: "Tell me about features" },
+			{ id: "qr2", text: "How can I test drive?" },
+			{ id: "qr3", text: "Financing options" },
+		];
+
+		// Context-specific quick replies
+		if (messageLC.includes("price") || messageLC.includes("cost")) {
+			setQuickReplies([
+				{ id: "qr1", text: "Financing options" },
+				{ id: "qr2", text: "Any current promotions?" },
+				{ id: "qr3", text: "Compare with other models" },
+			]);
+		} else if (messageLC.includes("engine") || messageLC.includes("power")) {
+			setQuickReplies([
+				{ id: "qr1", text: "Fuel efficiency?" },
+				{ id: "qr2", text: "Performance specs" },
+				{ id: "qr3", text: "Maintenance costs" },
+			]);
+		} else if (messageLC.includes("test drive")) {
+			setQuickReplies([
+				{ id: "qr1", text: "Schedule for tomorrow" },
+				{ id: "qr2", text: "Which location?" },
+				{ id: "qr3", text: "Documents needed?" },
+			]);
+		} else if (
+			messageLC.includes("leasing") ||
+			messageLC.includes("financing")
+		) {
+			setQuickReplies([
+				{ id: "qr1", text: "Down payment options?" },
+				{ id: "qr2", text: "What's included in leasing?" },
+				{ id: "qr3", text: "Buying vs leasing" },
+			]);
+		} else {
+			setQuickReplies(defaultReplies);
+		}
+	};
+
 	// Handle enter key press
 	const handleKeyPress = (e: React.KeyboardEvent) => {
 		if (e.key === "Enter") {
@@ -283,14 +364,15 @@ export function CarChatDialog({ car }: CarChatDialogProps) {
 				</div>
 			</DialogHeader>
 
-			<ScrollArea className="flex-1 bg-white">
+			<ScrollArea className="flex-1 overflow-auto bg-white h-[calc(100%-136px)]">
 				<div className="p-4 space-y-4">
-					{chatMessages.map((message) => (
+					{chatMessages.map((message, index) => (
 						<div
 							key={message.id}
 							className={cn(
 								"flex w-full",
 								message.isBot ? "justify-start" : "justify-end",
+								index === chatMessages.length - 1 ? "mb-6" : "",
 							)}
 						>
 							<div className={cn("max-w-[80%]", message.isBot ? "" : "")}>
@@ -304,10 +386,12 @@ export function CarChatDialog({ car }: CarChatDialogProps) {
 								>
 									{message.isBulletList ? (
 										<div className="whitespace-pre-line text-sm leading-6">
-											{message.content}
+											{formatMessageWithBold(message.content)}
 										</div>
 									) : (
-										<div className="text-sm">{message.content}</div>
+										<div className="text-sm whitespace-pre-line">
+											{formatMessageWithBold(message.content)}
+										</div>
 									)}
 								</div>
 								<div

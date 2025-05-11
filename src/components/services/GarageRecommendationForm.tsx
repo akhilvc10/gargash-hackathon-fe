@@ -21,6 +21,15 @@ import {
 	analyzeAccidentQuery,
 	type AnalysisResponse,
 } from "@/app/api/garage-recommendation/actions";
+import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogFooter,
+	DialogHeader,
+	DialogTitle,
+} from "@/components/ui/dialog";
+import { AnalysisResultsModal } from "./AnalysisResultsModal";
 
 export function GarageRecommendationForm() {
 	const router = useRouter();
@@ -28,6 +37,10 @@ export function GarageRecommendationForm() {
 	const [imagePreview, setImagePreview] = useState<string | null>(null);
 	const [imageFile, setImageFile] = useState<File | null>(null);
 	const [textDescription, setTextDescription] = useState("");
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [analysisResult, setAnalysisResult] = useState<AnalysisResponse | null>(
+		null,
+	);
 
 	const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const file = e.target.files?.[0];
@@ -65,9 +78,9 @@ export function GarageRecommendationForm() {
 			if (!result.success) {
 				throw new Error(result.error || "Failed to analyze image");
 			}
-
+			setAnalysisResult(result);
+			setIsModalOpen(true);
 			toast.success("Analysis complete! Showing recommended garages");
-			router.push("/existing-user/garage/recommendations?method=image");
 		} catch (error) {
 			console.error("Error submitting image:", error);
 			toast.error(
@@ -99,11 +112,9 @@ export function GarageRecommendationForm() {
 			if (!result.success) {
 				throw new Error(result.error || "Failed to analyze description");
 			}
-
+			setAnalysisResult(result);
+			setIsModalOpen(true);
 			toast.success("Analysis complete! Showing recommended garages");
-			router.push(
-				`/existing-user/garage/recommendations?method=text&q=${encodeURIComponent(textDescription)}`,
-			);
 		} catch (error) {
 			console.error("Error submitting description:", error);
 			toast.error(
@@ -229,6 +240,12 @@ export function GarageRecommendationForm() {
 					</CardContent>
 				</Card>
 			</TabsContent>
+
+			<AnalysisResultsModal
+				isOpen={isModalOpen}
+				onOpenChange={setIsModalOpen}
+				analysisResult={analysisResult}
+			/>
 		</Tabs>
 	);
 }
